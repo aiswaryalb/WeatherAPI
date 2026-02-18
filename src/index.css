@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --bg-lavender: #F3E8FF;
+  --pink: #FFD1DC;
+  --blue: #B9E2FE;
+}
+
+body {
+  background-color: var(--bg-lavender);
+  font-family: 'Quicksand', sans-serif;
+  color: #5D5C7F;
+  min-height: max(884px, 100dvh);
+}
+
+.cloud-shape-1 {
+  width: 300px;
+  height: 180px;
+  background: var(--pink);
+  border-radius: 100px;
+  filter: blur(40px);
+  opacity: 0.6;
+  position: absolute;
+  top: -50px;
+  left: -80px;
+  z-index: 0;
+}
+
+.cloud-shape-2 {
+  width: 250px;
+  height: 200px;
+  background: var(--blue);
+  border-radius: 100px;
+  filter: blur(50px);
+  opacity: 0.5;
+  position: absolute;
+  bottom: 10%;
+  right: -100px;
+  z-index: 0;
+}
+
+.squishy-button {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.squishy-button:active {
+  transform: scale(0.92) translateY(4px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.soft-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.smiley-sun {
+  position: relative;
+}
+
+.smiley-sun::after {
+  content: "•  •";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #713F12;
+  font-weight: bold;
+}
+
+.smiley-sun::before {
+  content: "⌣";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #713F12;
+}
